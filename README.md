@@ -12,7 +12,6 @@ This is the frontend user interface for the Helpdesk project. It allows users to
 ## Technologies Used
 
 - React
-- Redux
 - Axios for API calls
 - Material-UI for UI components
 
