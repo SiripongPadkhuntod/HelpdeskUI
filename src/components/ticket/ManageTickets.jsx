@@ -73,7 +73,7 @@ const ManageTicketsPage = ({ tickets = [] }) => {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const response = await fetch(`http://localhost:7001/tickets?sort=${sort}&filter=${filter}&searchTerm=${searchTerm}`);
+        const response = await fetch(`https://helpdeskapi.onrender.com/tickets?sort=${sort}&filter=${filter}&searchTerm=${searchTerm}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -88,12 +88,12 @@ const ManageTicketsPage = ({ tickets = [] }) => {
 
   const handleUpdateStatus = async (id, status) => {
     try {
-      await fetch(`http://localhost:7001/updateTicketStatus/${id}`, {
+      await fetch(`https://helpdeskapi.onrender.com/updateTicketStatus/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
       });
-      const response = await fetch(`http://localhost:7001/tickets?sort=${sort}&filter=${filter}&searchTerm=${searchTerm}`);
+      const response = await fetch(`https://helpdeskapi.onrender.com/tickets?sort=${sort}&filter=${filter}&searchTerm=${searchTerm}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -106,7 +106,7 @@ const ManageTicketsPage = ({ tickets = [] }) => {
 
   const updateTicketDetails = async (id, details) => {
     try {
-      await fetch(`http://localhost:7001/updateTicketDetails/${id}`, {
+      await fetch(`https://helpdeskapi.onrender.com/updateTicketDetails/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(details),

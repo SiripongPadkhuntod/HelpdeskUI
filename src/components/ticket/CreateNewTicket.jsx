@@ -21,7 +21,7 @@ const CreateTicketForm = ({ onClose }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:7001/addTicket', {
+      const response = await fetch('https://helpdeskapi.onrender.com/addTicket', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
