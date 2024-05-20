@@ -1,11 +1,45 @@
+# HelpdeskUI
 
-# Helpdesk
+This is the frontend user interface for the Helpdesk project. It allows users to create, view, and manage helpdesk tickets.
 
+## Features
 
-Helpdesk is a support ticket management application built using React, Vite, and Firebase. The application allows users to manage support tickets and provides various features for handling customer support tasks.
+- User authentication and registration
+- Create and manage helpdesk tickets
+- View ticket status and details
+- Responsive design for mobile and desktop
 
+## Technologies Used
 
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+- React
+- Redux
+- Axios for API calls
+- Material-UI for UI components
+
+## Installation
+
+1. Clone the repository:
+   `git clone https://github.com/SiripongPadkhuntod/HelpdeskUI.git`
+2. Navigate to the project directory:`
+`cd HelpdeskUI`
+3. Install dependencies:
+`npm install`
+
+# Usage
+1. Create a .env file in the root directory and add the following environment variables:
+`REACT_APP_API_URL=your_api_url`
+
+2. Start the development server:
+`npm start`
+
+3. The application will be accessible at http://localhost:3000.
+
+# Project Structure
+- src/components - React components
+- src/redux - Redux actions and reducers
+- src/pages - Application pages
+- src/services - API service calls
+
+## Contributing
+Contributions are welcome! Please submit a pull request or open an issue to discuss any changes.
 
