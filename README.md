@@ -36,7 +36,6 @@ This is the frontend user interface for the Helpdesk project. It allows users to
 
 # Project Structure
 - src/components - React components
-- src/redux - Redux actions and reducers
 - src/pages - Application pages
 - src/services - API service calls
 
