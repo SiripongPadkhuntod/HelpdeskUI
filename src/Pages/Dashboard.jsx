@@ -41,6 +41,17 @@ const Dashboard = () => {
     fetchTickets();
   }, []);
 
+  // Function to update ticket stats
+  const updateTicketStats = (data) => {
+    const newStats = {
+      pending: data.filter((ticket) => ticket.status === 'pending').length,
+      accepted: data.filter((ticket) => ticket.status === 'accepted').length,
+      resolved: data.filter((ticket) => ticket.status === 'resolved').length,
+      rejected: data.filter((ticket) => ticket.status === 'rejected').length,
+    };
+    setStats(newStats);
+  };
+
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -97,7 +108,7 @@ const Dashboard = () => {
 
       <Modal open={isModalOpen} onClose={handleCloseModal}>
         <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, p: 4 }}>
-          <CreateTicketForm onClose={handleCloseModal} />
+          <CreateTicketForm onClose={handleCloseModal} onUpdateStats={updateTicketStats} />
         </Box>
       </Modal>
     </Container>
