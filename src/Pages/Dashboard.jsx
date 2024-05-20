@@ -17,7 +17,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const response = await fetch('http://localhost:7001/tickets?sort=updatedAt&filter=all&searchTerm=');
+        const response = await fetch('https://helpdeskapi.onrender.com/tickets?sort=updatedAt&filter=all&searchTerm=');
         const data = await response.json();
         
         const newStats = {
